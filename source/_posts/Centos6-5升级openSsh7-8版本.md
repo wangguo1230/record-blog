@@ -3,6 +3,7 @@ title: Centos6.5升级openSSH7.8版本
 date: 2019-06-17 13:15:33
 tags: [linux,openssh,openssl,telnet]
 categories: linux
+comment: true
 ---
 
 
