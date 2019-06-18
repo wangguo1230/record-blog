@@ -84,3 +84,17 @@ deploy:
   type: git
   repository: https://github.com/wu-yan-Wang/wu-yan-Wang.github.io.git
   brahcn: master
+
+#search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
+# 文章count
+symbols_count_time:
+  symbols: true
+  time: true
+  total_symbols: true
+  total_time: true
