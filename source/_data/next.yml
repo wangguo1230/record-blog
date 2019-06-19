@@ -1000,12 +1000,12 @@ pace: true
 # pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
 # pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
 pace_theme: pace-theme-minimal
-# Canvas-nest
+# Canvas-nest  线条动态背景
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest:
-  enable: true
+  enable: false
   onmobile: true # display on mobile or not
-  color: "0,0,255" # RGB values, use ',' to separate
+  color: "88,255,94" # RGB values, use ',' to separate
   opacity: 0.5 # the opacity of line: 0~1
   zIndex: -1 # z-index property of the background
   count: 20 # the number of lines
@@ -1019,7 +1019,7 @@ canvas_lines: false
 # canvas_sphere
 canvas_sphere: false
 
-# Canvas-ribbon
+# Canvas-ribbon 彩带动态背景
 # Dependencies: https://github.com/theme-next/theme-next-canvas-ribbon
 # size: The width of the ribbon.
 # alpha: The transparency of the ribbon.
@@ -1027,7 +1027,7 @@ canvas_sphere: false
 canvas_ribbon:
   enable: false
   size: 300
-  alpha: 0.6
+  alpha: 0.3
   zIndex: -1
 
 
