@@ -35,9 +35,9 @@ cache:
 # ---------------------------------------------------------------
 
 favicon:
-  small: /images/favicon-16x16-next.png
-  medium: /images/favicon-32x32-next.png
-  apple_touch_icon: /images/apple-touch-icon-next.png
+  small: /images/catP.png
+  medium: /images/catP.png
+  apple_touch_icon: /images/catP.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
   #ms_browserconfig: /images/browserconfig.xml
@@ -999,7 +999,7 @@ pace: true
 # pace-theme-big-counter | pace-theme-bounce | pace-theme-barber-shop | pace-theme-center-atom
 # pace-theme-center-circle | pace-theme-center-radar | pace-theme-center-simple | pace-theme-corner-indicator
 # pace-theme-fill-left | pace-theme-flash | pace-theme-loading-bar | pace-theme-mac-osx | pace-theme-minimal
-pace_theme:  pace-theme-bounce
+pace_theme: pace-theme-minimal
 # Canvas-nest
 # Dependencies: https://github.com/theme-next/theme-next-canvas-nest
 canvas_nest:
@@ -1008,7 +1008,7 @@ canvas_nest:
   color: "0,0,255" # RGB values, use ',' to separate
   opacity: 0.5 # the opacity of line: 0~1
   zIndex: -1 # z-index property of the background
-  count: 99 # the number of lines
+  count: 20 # the number of lines
 
 # JavaScript 3D library.
 # Dependencies: https://github.com/theme-next/theme-next-three

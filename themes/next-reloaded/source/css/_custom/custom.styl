@@ -1,3 +1,5 @@
+
+// 文章
 .post {
     margin-bottom: 30px;
     padding: 25px;
@@ -5,11 +7,12 @@
     -moz-box-shadow: 0 0 5px rgba(202, 203, 204, .5);
 }
 
+// 整体下滑40px
 .header {
     margin-top: 40px;
 }
 
-// 行内代码样式
+// code 编码的样式
 code {
     padding: 1px 4px;
     border: 1px solid #d6d6d6;
@@ -28,4 +31,36 @@ code {
 
 .highlight, code, pre {
     border: 1px solid #d6d6d6;
+}
+
+// a连接
+.post-body p a {
+    border-bottom: none;
+    border-bottom: 1px solid #0593d3;
+    color: #0593d3;
+
+    &:hover {
+        border-bottom: none;
+        border-bottom: 1px solid #fc6423;
+        color: #fc6423;
+    }
+}
+
+// 头部背景
+.site-meta {
+    background-image: linear-gradient(200deg, #a0cfe4, #e8c37e);
+}
+
+.site-subtitle {
+    color: #fff;
+}
+
+// 背景图片
+body {
+    position: relative;
+    background: #87daff;
+    color: #555;
+    font-size: 14px;
+    font-family: Lato, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 2;
 }
