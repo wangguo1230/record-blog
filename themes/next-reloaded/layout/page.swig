@@ -31,7 +31,8 @@
       <div class="post-body{% if theme.han %} han-init-context{% endif %}{% if page.direction && page.direction.toLowerCase() === 'rtl' %} rtl{% endif %}">
         {# tagcloud page support #}
         {% if page.type === 'tags' %}
-          <div class="tag-cloud">
+          {% include '_custom/tagspage.swig' %}
+          <!--<div class="tag-cloud">
             <div class="tag-cloud-title">
               {% set visibleTags = 0 %}
               {% for tag in site.tags %}
@@ -48,7 +49,7 @@
                 {{ tagcloud({min_font: theme.tagcloud.min, max_font: theme.tagcloud.max, amount: theme.tagcloud.amount, color: true, start_color: theme.tagcloud.start, end_color: theme.tagcloud.end}) }}
               {% endif %}
             </div>
-          </div>
+          </div>-->
         {% elif page.type === 'categories' %}
           <div class="category-all-page">
             <div class="category-all-title">
