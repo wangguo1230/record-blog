@@ -3,7 +3,9 @@ title: hexo-url链接有中文问题
 comments: true
 date: 2019-06-17 19:53:40
 categories: hexo
-tags: hexo permalink
+tags: 
+  - hexo
+  - permalink
 ---
 
 ## 使用hexo-abbrlink这个插件来解决url链接有中文乱码问题。

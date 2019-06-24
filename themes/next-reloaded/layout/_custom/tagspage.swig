@@ -9,38 +9,58 @@
 var alltags=document.getElementById('tags');
 var tags=alltags.getElementsByTagName('a');
 
-for (var i = tags.length - 
-1; i >= 0; i--) {
-    var r=Math.floor(Math.random()*75+130);
-    var g=Math.floor(Math.random()*75+100);
-    var b=Math.floor(Math.random()*75+80);
-    tags[i].style.background = "rgb("+r+","+g+","+b+")";
+//随机颜色
+function getColor() {
+    var colorElements = "0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f";
+    var colorArray = colorElements.split(",");
+    var color = "#";
+    for (var i = 0; i < 6; i++) {
+        color += colorArray[Math.floor(Math.random() * 16)];
+    }
+    return color;
 }
+
+//随机字体
+function getSize(){
+    return Math.floor(Math.random() * (30 - 10) + 10);
+}
+
+//改变样式
+function getTagHtml(tagArr){
+    if(tagArr!=null && tagArr.length>0){
+        for(var i=0;i<tagArr.length;i++){
+            var color = getColor();
+            var size = getSize();
+            tagArr[i].style.background = color;
+            tagArr[i].style.fontSize=size+'px';
+        }
+    }
+}
+
+getTagHtml(tags);
 </script>
 
 <style type="text/css">
 div#posts.posts-expand .tag-cloud a{
-background-color: #f5f7f1;
-border-radius: 6px;
-padding-left: 10px;
-padding-right: 10px;
-margin-top: 18px;
-
+    border-radius: 6px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 18px;
 }
 
 .tag-cloud a{
-background-color: #f5f7f1;
-border-radius: 4px;
-padding-right: 5px;
-padding-left: 5px;
-margin-right: 5px;
-margin-left: 0px;
-margin-top: 8px;
-margin-bottom: 0px;
+    background-color: #f5f7f1;
+    border-radius: 4px;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 5px;
+    margin-left: 0px;
+    margin-top: 8px;
+    margin-bottom: 0px;
 }
 
 .tag-cloud-tags{
-text-align: left;
-counter-reset: tags;
+    text-align: left;
+    counter-reset: tags;
 }
 </style>
