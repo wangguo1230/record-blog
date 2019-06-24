@@ -89,10 +89,19 @@ body {
     background-image: linear-gradient(180deg, #f79533 0, #f37055 15%, #ef4e7b 30%, #a166ab 44%, #5073b8 58%, #1098ad 72%, #07b39b 86%, #6dba82 100%);
 }
 
+// 归档 悬浮
 .posts-collapse .post-header {
     top: 5px;
     height: 40px;
     border-bottom: none;
+
+    &:hover::before {
+        background: #fc6423;
+    }
+
+    & a:hover {
+        color: #fc6423;
+    }
 }
 
 // 文章日期

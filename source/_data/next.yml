@@ -94,7 +94,7 @@ footer:
 creative_commons:
   license: by-nc-sa
   sidebar: false
-  post: false
+  post: true
   language:
 
 # `Follow me on GitHub` banner in the top-right corner.
@@ -432,12 +432,12 @@ cheers: true
 # TagCloud settings for tags page.
 tagcloud:
   # If true, font size, font color and amount of tags can be customized
-  enable: false
+  enable: true
   # All values below are same as default, change them by yourself
-  min: 5 # min font size in px
+  min: 12 # min font size in px
   max: 30 # max font size in px
-  start: "#F511C8" # start color (hex, rgba, hsla or color keywords)
-  end: "#0EEE3A" # end color (hex, rgba, hsla or color keywords)
+  start: "#ccc" # start color (hex, rgba, hsla or color keywords)
+  end: "#111" # end color (hex, rgba, hsla or color keywords)
   amount: 200 # amount of tags, change it if you have more than 200 tags
 
 

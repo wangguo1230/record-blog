@@ -5,7 +5,7 @@
 <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div id="myCanvasContainer" class="widget tagcloud">
-        <canvas width="250" height="250" id="resCanvas" style="width=100%">
+        <canvas width="200" height="250" id="resCanvas" style="width:100%">
             {{ list_tags() }}
         </canvas>
     </div>
@@ -13,6 +13,8 @@
 <style>
 .widget-title{
     border-left: 4px solid #16a085;
+    padding-left: 5px;
+    background: #f7f7f7;
 }
 </style>
 {% endif %}

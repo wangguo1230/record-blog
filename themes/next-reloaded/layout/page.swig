@@ -32,7 +32,7 @@
         {# tagcloud page support #}
         {% if page.type === 'tags' %}
           {% include '_custom/tagspage.swig' %}
-          <!--<div class="tag-cloud">
+         <!--<div class="tag-cloud">
             <div class="tag-cloud-title">
               {% set visibleTags = 0 %}
               {% for tag in site.tags %}
