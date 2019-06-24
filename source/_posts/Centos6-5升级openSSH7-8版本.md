@@ -2,22 +2,21 @@
 title: Centos6.5升级openSSH7.8版本
 date: 2019-06-17 13:15:33
 tags: [linux,openssh,openssl,telnet]
-categories:
-    - linux - openSSH
+categories: [linux,openSSH]
 ---
 
 
 -----
 
-## 准备工作
+# 准备工作
 
 
-### 查看是否安装telnet
+## 查看是否安装telnet
 ```
 rpm -qa |grep telnet
 ```
 
-### 安装telnet
+## 安装telnet
 ```
 1. yum install xinetd
 
@@ -28,56 +27,53 @@ rpm -qa |grep telnet
 
 >如果安装时报错,说明yum的源不对,可设置本地挂载,从官网下载yum的源文件,上传至服务器,修改/etc/yum.repos.d/rhel-source.repo 文件,具体的自行百度
 
-
-### 修改disable yes为no
+<!-- more -->
+## 修改disable yes为no
 ```
 vi /etc/xinetd.d/telnet
 ```
 
-### 重新启动
+## 重新启动
 ```
 service xinetd restart
 ```
 
-### 防火墙增加23端口
-
+## 防火墙增加23端口
 ```
 vi /etc/sysconfig/iptables
 
 -A INPUT -p tcp -m tcp --dport 23 -j ACCEPT
 ```
 
-### 重启防火墙
+## 重启防火墙
 ```
 service iptables restart
 ```
-### 查看防火墙规则
-
+## 查看防火墙规则
 ```
  iptables --list -n
 ```
 
-### 安装依赖包
+## 安装依赖包
 >先执行`whereis zlib` 如果有输出文件目录就不用执行下面的安装
 ```
 yum -y install gcc pam-devel zlib-devel
 ```
-<!-- more -->
-### 查看是否成功
 
+## 查看是否成功
 ```
  whereis zlib
 ```
 
-## 安装openssl
+# 安装openssl
 
-### 备份openssl
+## 备份openssl
 ```
 mv /usr/bin/openssl /usr/bin/openssl.old
 
 mv /usr/include/openssl/ /usr/include/openssl.old
 ```
-### 解压源码并安装openssl
+## 解压源码并安装openssl
 ```
 1. tar xf openssl-1.0.2h.tar.gz 
 2. cd openssl-1.0.2h/
@@ -92,10 +88,9 @@ mv /usr/include/openssl/ /usr/include/openssl.old
 11. openssl version -a
 ```
 
-## 安装openssh
+# 安装openssh
 
-### 备份openssh
-
+## 备份openssh
 ```
 1. mv /etc/init.d/sshd /etc/init.d/sshd.old
 2. mv /etc/ssh /etc/ssh.old
@@ -103,8 +98,7 @@ mv /usr/include/openssl/ /usr/include/openssl.old
 4. mv /usr/bin/ssh /usr/bin/ssh.old
 ```
 
-### 解压并安装openssh
-
+## 解压并安装openssh
 ```
 1. tar xf openssh-7.8p1.tar.gz
 2. cd openssh-7.8p1
@@ -119,7 +113,7 @@ mv /usr/include/openssl/ /usr/include/openssl.old
 ```
 
 
-### 测试是否可以连接
+## 测试是否可以连接
 ```
 ssh sdwz@10.72.11.124
 
@@ -140,7 +134,7 @@ Host key verification failed.
 ```
 > 出现这些信息 把用户的.ssh文件夹下的known_hosts改名或删除即可
 
-连接成功后,执行
+## ssh升级成功,可将telnet关闭
 ```
 1. service xinetd stop # 停止telnet
 2. vi /etc/sysconfig/iptables #删除23的规则
