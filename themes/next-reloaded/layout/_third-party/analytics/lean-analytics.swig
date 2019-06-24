@@ -88,7 +88,7 @@
     {% endif %}
 
     $(function() {
-      $.get('https://app-router.leancloud.cn/2/route?appId=' + '{{ theme.leancloud_visitors.app_id }}')
+      $.get('https://app-router.avoscloud.com/2/route?appId=' + '{{ theme.leancloud_visitors.app_id }}')
         .done(function({ api_server }) {
           var Counter = function(method, url, data) {
             return $.ajax({
